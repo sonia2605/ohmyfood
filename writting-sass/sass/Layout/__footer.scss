@@ -1,0 +1,33 @@
+footer {
+    background-color: $Colour-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-betwween;
+    padding: 25px 0px;
+    max-width: 100%;
+    min-width: 320px;
+
+    h3 {
+    margin: 0 0 10px 20px;
+    color: $TextColorFooter;
+    font-weight: 500;
+    &:hover {
+        color: $hoverColorFooter;
+    }
+    }   
+    .fas {
+        margin-right: 1.6rem;
+    }
+    a {
+    line-height: 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    }
+
+    .footer_logo {
+    font-weight: 500;
+    font-family: 'shrikhand', cursive;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    }
+}

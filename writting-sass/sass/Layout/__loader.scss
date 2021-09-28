@@ -1,0 +1,71 @@
+
+.loading {
+	font-family: 'shrikhand';
+	font-size: 5rem;
+	color: $colour-secondary;
+	text-align: center;
+	background-color: $Colour-background;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	display: inline-block;
+	Z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: fadeOut 1s both;
+	-webkit-animation: fadeOut 3s both;
+}
+@keyframes fadeOut{
+	0%, 60% {opacity: 1;
+			z-index: 5;}
+	75% {opacity: 0.8}
+	90% {opacity: 0.2}
+	100% {opacity: 0;
+		 z-index: -9;}
+}
+
+.loader {
+	position: relative;
+}	
+.Bar:before,
+.Bar:after,
+.Bar span:before,
+.Bar span:after{
+	content: '';
+	position: absolute;
+	display: block;
+	margin: 10rem;
+	left: 0px;
+	top: 0;
+	padding-left: 50px;
+	width: 10px;
+	height: 50px;
+	border-radius: 50px;
+	background-color: $colour-primary;
+	-webkit-animation: bar 1s linear infinite;
+	animation: bar 1s linear infinite;}
+	.Bar:after{
+	left: 15px;
+	top: -15px;
+	background-color: $colour-secondary;
+	-webkit-animation-delay: .25s;
+	animation-delay: .25s;}
+	.Bar span:before{
+	left: 35px;
+	top: -30px;
+	background-color: $colour-tertiary;
+	-webkit-animation-delay: .50s;
+	animation-delay: -.50s;}
+	.Bar span:after{
+	left: 45px;
+	top: 35px;
+	background-color: $colour-ball-loader;
+	-webkit-animation-delay: .75s;
+	animation-delay: .75s;}
+
+@keyframes bar{
+	0% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity:0;}
+	50% {-webkit-transform: scaleY(1); transform: scaleY(1); opacity:1;}
+	100% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity:0;}
+}

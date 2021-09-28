@@ -1,0 +1,30 @@
+header {
+    box-shadow:rgba(0, 0, 0, 0.05) 0px 0.1rem 0.3rem, rgba(0, 0, 0, 0.05) 0px 0.1rem 0.2rem, rgba(0, 0, 0, 0.05) 0px 0.5rem 1.5rem;border:0;
+    width: 100%;
+    min-width: 320px;
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        img {
+            width: 50%;
+            max-width: 300px;
+            height: auto;
+        }
+    }
+}
+
+.fa-arrow-left:before {
+    position: absolute;
+    left: 2rem;
+    height: 2rem;
+    width: 2rem;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: black;
+}
