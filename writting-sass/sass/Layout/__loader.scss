@@ -13,8 +13,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation: fadeOut 1s both;
-	-webkit-animation: fadeOut 3s both;
+	animation: fadeOut 0 both;
+	-webkit-animation: fadeOut 0s both;
 }
 @keyframes fadeOut{
 	0%, 60% {opacity: 1;

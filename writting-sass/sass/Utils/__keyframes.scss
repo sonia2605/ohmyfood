@@ -1,0 +1,31 @@
+// -- A voir si j'utilise
+$wiggle-intensity: 3px;
+
+@keyframes wiggle {
+    0% {
+      transform: translateX($wiggle-intensity);
+    }
+    50% {
+      transform: translateX(-$wiggle-intensity);
+    }
+    70% {
+      transform: translateX($wiggle-intensity);
+    }
+}
+
+// -- Footer
+@keyframes effect {
+    0% {background-color: $colour-primary;
+    -webkit-background-clip: text;
+    }
+    25% {background-color: $colour-ball-loader;
+    -webkit-background-clip: text;
+    }
+    
+    50% {background-color: $colour-secondary;
+    -webkit-background-clip: text;
+    }
+    100% {background-color: $colour-tertiary;
+    -webkit-background-clip: text;
+    }
+}

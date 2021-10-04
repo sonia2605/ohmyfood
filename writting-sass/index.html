@@ -31,48 +31,61 @@
         <img src="images/logo/logo.png.png" alt="Logo Ohmyfood">
     </div>
 </header>
+<main class="principal">
     <!--Localization-->
-    <div class="Search">
-        <i class="fas fa-map-marker-alt"></i>
-        <p>Paris, Belleville</p>
-    </div>
-    <!-- slogan-->
-    <section class="Slogan">
-        <P class="TitleSlogan">Réservez le menu qui vous convient</P><br>
-        <P class="TexteSlogan">Découvrez des restaurants d'exception, sélectionnés par nos soins.</P><br>
-        <a class="ButtonSlogan" href="#">Explorez nos restaurants</a>
-    </section>
-    <!-- Function -->
-    <h2 class="TitleFunction">Fonctionnement</h2>
-    <section class="Function">
-        <div class="ChoiceFunction">
-            <i class="fas fa-tablet-alt"></i>Choisissez un restaurant
-            <div class="ChoiceFunctionNumber">1</div>
-            </div>
-        <div class="ChoiceFunction">
-            <i class="fas fa-list-ul"></i>Composez votre menu
-            <div class="ChoiceFunctionNumber">2</div>
+    <article class="Research">
+        <div class="situation">
+            <form method="post" action="treatment.php">
+                <i class="situation_icon fas fa-map-marker-alt" aria-hidden="true"></i>
+            <input id="Search" clas="situation_form" type="search" name="search" placeholder="Paris, Belleville">
+            </form>
         </div>
-        <div class="ChoiceFunction">
-            <i class="fas fa-store"></i>Dégustez au restaurant
-            <div class="ChoiceFunctionNumber">3</div>
-        </div>  
-    </section>
+    <!-- slogan-->
+<h2 class="SloganTitle">Réservez le menu qui vous convient</h2>
+<P class="SloganText">Découvrez des restaurants d'exception, sélectionnés par nos soins.</P><br>
+<h3 class="SloganSearchButton">
+    <a class="SloganSearchButton--link" href="#">Explorez nos restaurants</a></h3>   
+    </article>
+    <!-- Function -->
+    <article class="Functioning">
+    <h2 class="FunctionTitle">Fonctionnement</h2>
+    <h3 class="function_element">
+        <span class="function_element--number">1</span>
+    </h3>
+    <i class="function_element--icon fas fa-tablet-alt" aria-hidden="true"></i>
+    Choisissez un restaurant 
+    </h3>
+
+    <h3 class="function_element">
+        <span class="function_element--number">2</span>
+    </h3>
+    <i class="function_element--icon fas fa-list-ul" aria-hidden="true"></i>
+    Composez votre menu
+    </h3>
+
+    <h3 class="function_element">
+        <span class="function_element--number">3</span>
+    </h3>
+    <i class="function_element--icon fas fa-store" aria-hidden="true"></i>
+    Dégustez au restaurant 
+    </h3>
+    </article>    
+
     <!-- restaurants -->
-    <section class="Restaurants">
-        <div class="TitleRestaurants">
+    <section class="restaurants">
+        <div class="restaurants_title">
             <h2>Restaurants</h2>
         </div>
-        <div class="BlockRestaurants">
+        <div class="restaurants_block">
             <a href="la-palette-du-gout.html">
-                <div class="CardRestaurants">
-                    <div class="ImgCardRestaurants">
+                <div class="restaurants_card">
+                    <div class="restaurants_card_image">
                         <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                                 alt="La palette du goût">
-                        <div class="button-new">Nouveau</div>
+                        <div class="button_new">Nouveau</div>
                     </div>
-                    <div class="ContentCardRestaurants">
-                        <div class="TitleContentCardRestaurant">
+                    <div class="restaurants_card_content">
+                        <div class="restaurants_card_content_title">
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
                         </div>
@@ -89,14 +102,14 @@
             </a>
 
             <a href="la-note-enchantee.html">
-                <div class="CardRestaurants">
-                    <div class="ImgCardRestaurants">
+                <div class="restaurants_card">
+                    <div class="restaurants_card_image">
                         <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
                                 alt="La note enchantée">
-                        <div class="button-new">Nouveau</div>
+                        <div class="button_new">Nouveau</div>
                     </div>
-                    <div class="ContentCardRestaurants">
-                        <div class="TitleContentCardRestaurant">
+                    <div class="restaurants_card_content">
+                        <div class="restaurants_card_content_title">
                             <h3>La note enchantée</h3>
                             <p>Charonne</p>
                         </div>
@@ -113,13 +126,13 @@
             </a> 
 
             <a href="a-la-francaise.html">
-                <div class="CardRestaurants">
-                    <div class="ImgCardRestaurants">
+                <div class="restaurants_card">
+                    <div class="restaurants_card_image">
                         <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                                 alt="A la française">
                     </div>
-                    <div class="ContentCardRestaurants">
-                        <div class="TitleContentCardRestaurant">
+                    <div class="restaurants_card_content">
+                        <div class="restaurants_card_content_title">
                             <h3>A la française</h3>
                             <p>Cité Rouge</p>
                         </div>
@@ -136,13 +149,13 @@
             </a> 
 
             <a href="le-delice-des-sens.html">
-                <div class="CardRestaurants">
-                    <div class="ImgCardRestaurants">
+                <div class="restaurants_card">
+                    <div class="restaurants_card_image">
                         <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                                 alt="Le délice des sens">
                     </div>
-                    <div class="ContentCardRestaurants">
-                        <div class="TitleContentCardRestaurant">
+                    <div class="restaurants_card_content">
+                        <div class="restaurants_card_content_title">
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
                         </div>
@@ -158,6 +171,7 @@
              </div>
             </a>
     </section>
+</main>   
    <!-- Footer -->
    <footer>
     <h3 class="footer_logo">ohmyfood</h3>

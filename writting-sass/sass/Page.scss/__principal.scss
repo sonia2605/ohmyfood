@@ -1,0 +1,247 @@
+.main_container {
+display: flex;
+flex-flow: row wrap;
+justify-content: stretch;
+align-items: flex-end;
+}
+
+
+// -- City research
+.Research {
+    text-align: center;
+    padding: 0px 20px 50px 20px;
+    box-shadow:0px -6px 5px rgba(59, 57, 57, 0.212);border:0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: $colour-block;
+    flex: 1 1 400px;
+}
+.situation {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    margin: 0px -20px;
+    background-color: $dark;
+    .situation__icon {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    .situation__form {
+    position: relative;
+}
+}
+}
+.fas {
+    font-weight: 900;
+}
+#Search {
+    text-align: center;
+    width: 140px;
+    font-weight: bold;
+    line-height: 25px;
+    font-size: 1rem;
+    border: 0px;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 10px 0;
+    text-transform: full-width;
+}
+    .SloganTitle {
+        font-weight: bolder;
+        font-size: 1.6rem;
+        margin-top: 40px;
+    }
+    .SloganText {
+        font-weight: 200;
+        font-size: 1.4rem;
+        line-height: 60px;
+    }
+    .SloganSearchButton {
+        padding: .75rem 1.5rem;
+        border-radius: 30px;
+        width: 210px;
+        height: 49px;
+        line-height: 49px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        position: relative;
+        Z-index: 1;
+        margin: 30px auto 0px auto;
+        @include gradient-color;
+        transition: all 300ms ease-out;
+        box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 1rem 1rem 20px rgb(0 0 0 / 25%);
+    }
+    .SloganSearchButton--link {
+        color: #FFF;
+        font-size: 1.1rem;
+    }
+    }
+
+// -- Fonctionnement A modifier !!!!
+
+.FunctionTitle {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+}
+.Functioning {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 15px;
+    .function_element {
+    position: relative;
+    background: #f6F6F6;
+    padding: 25px 30px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 6px #a5a5a5;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-out;
+    .function_element--number {
+    background-color: $colour-primary;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: white;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: calc(0px - 12.5px);
+    }
+}
+    .function_element--icon {
+    position: absolute;
+    margin-right: 20px;
+    color: #7e7e7e;
+    left: 15%;
+    font-size: 1.3rem;
+    width: 50px;
+    text-align: center;
+    .fas{
+        font-weight: 900;
+            display: inline-block;
+            font-size: 500;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+    }
+    }
+}
+//-- restaurant
+.restaurants {
+    background-color: #f6f6f6;
+
+    &_block {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &_title {
+    padding: 50px 0 10px 22px;
+    }
+
+    &_card {
+    border-radius: 20px;
+    background-color: whitesmoke;
+    margin-bottom: 18px;
+    position: relative;
+    max-width: 280px;
+    min-width: 280px;
+
+    @media screen and (min-width: 375px) {
+        max-width: 330px;
+        min-width: 280px;
+    }
+    @media screen and (min-width: 650px) {
+        margin-right: 25px;
+    }
+    img {
+    width: 100%;
+    max-height: 175px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    object-fit: cover;
+    }
+    .restaurants_card_content {
+    padding: 19px 11px;
+    position: relative;
+    display: flex;
+
+    h3 {
+    margin-bottom: 6px;
+    }
+    .restaurants_card_content_title {
+    position: relative;
+    }
+    @keyframes heart_full_opacity {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+        @include gradient-color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    50% {
+        opacity: 1;
+        @include gradient-color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@keyframes heart_empty_opacity1 {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.heart {
+    position: absolute;
+    right: 20px;
+    top: 1;
+
+    &_1 {
+        position: relative;
+
+        &:hover {
+            animation: heart_empty_opacity1 2s;
+        }
+    }
+
+    &_2 {
+        position: absolute;
+        top: 0px;
+        opacity: 0;
+        color: #FFF;
+        &:hover {
+            animation: heart_full_opacity 1s forwards;
+        }
+
+        }
+    }
+}
+}
+
+
+}
