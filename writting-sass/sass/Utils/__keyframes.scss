@@ -1,3 +1,17 @@
+// -- Spinning loader
+@keyframes fadeOut{
+	0%, 60% {opacity: 1;
+			z-index: 5;}
+	75% {opacity: 0.8}
+	90% {opacity: 0.2}
+	100% {opacity: 0;
+		 z-index: -9;}
+}
+@keyframes bar{
+	0% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity:0;}
+	50% {-webkit-transform: scaleY(1); transform: scaleY(1); opacity:1;}
+	100% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity:0;}
+}
 // -- A voir si j'utilise
 $wiggle-intensity: 3px;
 

@@ -1,26 +1,25 @@
 // -- Bouton commander
-.button_check {
-    padding: 30px 0 80px 0;
-    text-align: center;
-
-    &--pink {
-        background-color: $Colour-background;
-        padding: 15px 50px;
-        border-radius: 30px;
-        margin: 0 auto;
+.btn {
+        display: block;
+        width: max-content;
+        margin: auto;
         @include shadow;
+        border-radius: 10rem;
         color: $colour-text;
-        font-weight: 500;
-        font-size: 1.1rem;
-        transform: scale(1);
-        transition: transform 500ms;
+        padding: .75rem 1.5rem;
+        text-align: center;
         opacity: 1;
         @include gradient-color;
-        
+        transform: scale(1);
+        transition: transform 400ms;
+        @media screen and (max-width: 320px) {
+            width: 168px;
+            font-size: 0.7rem;
+        }
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.15);
             opacity: 0.8;
             @include dark_shadow;
-        }
-    }
+               
+}
 }

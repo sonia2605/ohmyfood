@@ -1,11 +1,9 @@
 header {
-    width: 100%;
     min-width: 320px;
     padding: 21px 0;
     .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: relative;
+        @include flexbox(center, center);
 
         img {
             max-width: 168px;
@@ -13,16 +11,13 @@ header {
     }
     }
 
-
-.fa-arrow-left:before {
+.fa-arrow-left::before {
     position: absolute;
     left: 2rem;
     height: 2rem;
     width: 2rem;
     top: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexbox (center, center);
     transform: translateY(-50%);
     font-size: 1.2rem;
     color: black;

@@ -8,6 +8,7 @@ $colour-text: whitesmoke;
 $shadow-color: #acacac;
 $colour-block: #f6F6F6;
 $dark: darken($colour-block, 6%);
+$bright: lighten($colour-primary, 35);
 /* Loader */
 $colour-ball-loader: #20b2AA;
 // - Footer

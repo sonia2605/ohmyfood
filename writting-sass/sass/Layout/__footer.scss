@@ -3,7 +3,7 @@ footer {
     background-color: $Colour-background;
     padding: 15px 0px;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         @include flexbox(center,column);
         align-items: flex-start;
         padding: 10px 0;
@@ -23,7 +23,7 @@ footer {
       transition: transform 300ms;
       opacity: 1;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 768px) {
           padding: 5px;
           font-size: 0.9rem;
       }

@@ -4,26 +4,17 @@
 	font-size: 5rem;
 	color: $colour-secondary;
 	text-align: center;
-	background-color: $Colour-background;
+	background-color: $colour-block;
 	height: 100%;
 	width: 100%;
 	position: fixed;
 	display: inline-block;
 	Z-index: 1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	animation: fadeOut 0 both;
+	@include flexbox (center, center);
+	animation: fadeOut 0s both;
 	-webkit-animation: fadeOut 0s both;
 }
-@keyframes fadeOut{
-	0%, 60% {opacity: 1;
-			z-index: 5;}
-	75% {opacity: 0.8}
-	90% {opacity: 0.2}
-	100% {opacity: 0;
-		 z-index: -9;}
-}
+
 
 .loader {
 	position: relative;
@@ -64,8 +55,3 @@
 	-webkit-animation-delay: .75s;
 	animation-delay: .75s;}
 
-@keyframes bar{
-	0% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity:0;}
-	50% {-webkit-transform: scaleY(1); transform: scaleY(1); opacity:1;}
-	100% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity:0;}
-}

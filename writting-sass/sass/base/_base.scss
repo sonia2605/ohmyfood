@@ -6,17 +6,12 @@
 body{
     box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;  
+    width: 98%;
+    max-width: 1440px;
+    margin: auto;
 }
 
 a {
     text-decoration: none;
     color: black;
-}
-
-.block_page {
-    width: 100%;
-    max-width: 1440px;
-    margin: auto;
-    padding-left: calc(50% - var(--block_page)/2);
-    padding-right: calc(50% - var(--block_page)/2);
 }
