@@ -12,11 +12,16 @@
 
 .card_name {
     font-family: 'Shrikhand', cursive;
-    max-width: 322px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
-.fa-heart:before {
-    margin-left: 20px;
+.fa-heart::before {
+    color: $shadow-color;
+    animation: fill 3s ease-out;
 }
+
+
 .menu {
     @media screen and (min-width: 1024px) {
         display: flex;

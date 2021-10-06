@@ -6,9 +6,6 @@
 body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  width: 98%;
-  max-width: 1440px;
-  margin: auto;
 }
 
 a {
@@ -50,33 +47,40 @@ a {
     opacity: 0;
   }
 }
-@keyframes wiggle {
+@keyframes fill {
   0% {
-    transform: translateX(3px);
-  }
-  50% {
-    transform: translateX(-3px);
-  }
-  70% {
-    transform: translateX(3px);
-  }
-}
-@keyframes effect {
-  0% {
-    background-color: #9356DC;
-    -webkit-background-clip: text;
-  }
-  25% {
-    background-color: #20b2AA;
-    -webkit-background-clip: text;
-  }
-  50% {
-    background-color: #FF79DA;
-    -webkit-background-clip: text;
+    opacity: 0.5;
   }
   100% {
-    background-color: #99E2D0;
+    opacity: 1;
+  }
+}
+@keyframes heart_full_opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    background-image: linear-gradient(170deg, #FF79DA, #9356DC);
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    opacity: 1;
+    background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+@keyframes heart_empty_opacity1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 .loading {
@@ -226,6 +230,11 @@ footer .footer_logo {
   color: whitesmoke;
 }
 
+.principal {
+  max-width: 1440px;
+  margin: auto;
+}
+
 .Research {
   text-align: center;
   padding: 0px 20px 50px 20px;
@@ -301,7 +310,6 @@ footer .footer_logo {
 }
 
 .functioning {
-  margin: auto;
   font-size: 0.9rem;
   padding: 0 15px;
   display: flex;
@@ -310,7 +318,9 @@ footer .footer_logo {
 }
 @media screen and (max-width: 768px) {
   .functioning {
+    justify-content: center;
     flex-wrap: wrap;
+    font-size: 0.6rem;
   }
 }
 .functioning h2 {
@@ -323,33 +333,48 @@ footer .footer_logo {
   position: relative;
   background: #f6F6F6;
   padding: 30px 50px 30px 18px;
-  margin-left: 20px;
   text-align: center;
   border-radius: 20px;
   box-shadow: 0px 3px 6px #a5a5a5;
   transition: all 300ms ease-out;
+}
+@media screen and (max-width: 1024px) {
+  .functioning .function_element {
+    margin: 0 15px 25px 15px;
+    padding: 20px 40px 20px 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .functioning .function_element {
+    margin: 0 10px 20px 10px;
+    padding: 15px 30px 15px 0px;
+  }
 }
 .functioning .function_element:hover {
   background-color: #f2eafb;
 }
 .functioning .function_element--number {
   background-color: #9356DC;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   color: whitesmoke;
   padding: 4px 4px;
-  font-weight: 400;
-  font-size: 0.9rem;
   position: absolute;
   top: 30%;
   left: -4%;
 }
+@media screen and (max-width: 768px) {
+  .functioning .function_element--number {
+    width: 14px;
+    height: 14px;
+  }
+}
 
 .function_element--icon {
   color: #acacac;
-  padding-right: 12px;
-  padding-left: 10px;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
 .restaurants {
@@ -401,34 +426,6 @@ footer .footer_logo {
 .restaurants_card .restaurants_card_content .restaurants_card_content_title {
   position: relative;
 }
-@keyframes heart_full_opacity {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-    background-image: linear-gradient(170deg, #FF79DA, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  50% {
-    opacity: 1;
-    background-image: linear-gradient(170deg, #FF79DA, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-@keyframes heart_empty_opacity1 {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .restaurants_card .restaurants_card_content .heart {
   position: absolute;
   right: 20px;
@@ -438,13 +435,13 @@ footer .footer_logo {
   position: relative;
 }
 .restaurants_card .restaurants_card_content .heart_1:hover {
-  animation: heart_empty_opacity1 2s;
+  animation: heart_empty_opacity1 3s;
 }
 .restaurants_card .restaurants_card_content .heart_2 {
   position: absolute;
   top: 0px;
   opacity: 0;
-  color: #FFF;
+  color: whitesmoke;
 }
 .restaurants_card .restaurants_card_content .heart_2:hover {
   animation: heart_full_opacity 1s forwards;
@@ -468,11 +465,14 @@ footer .footer_logo {
 
 .card_name {
   font-family: "Shrikhand", cursive;
-  max-width: 322px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.fa-heart:before {
-  margin-left: 20px;
+.fa-heart::before {
+  color: #acacac;
+  animation: fill 3s ease-out;
 }
 
 @media screen and (min-width: 1024px) {

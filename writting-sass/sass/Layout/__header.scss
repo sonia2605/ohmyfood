@@ -1,12 +1,13 @@
 header {
     min-width: 320px;
     padding: 21px 0;
+    
     .logo {
         position: relative;
         @include flexbox(center, center);
-
         img {
             max-width: 168px;
+            
         }
     }
     }

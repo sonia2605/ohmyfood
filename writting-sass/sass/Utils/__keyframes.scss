@@ -12,34 +12,41 @@
 	50% {-webkit-transform: scaleY(1); transform: scaleY(1); opacity:1;}
 	100% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity:0;}
 }
-// -- A voir si j'utilise
-$wiggle-intensity: 3px;
-
-@keyframes wiggle {
-    0% {
-      transform: translateX($wiggle-intensity);
-    }
-    50% {
-      transform: translateX(-$wiggle-intensity);
-    }
-    70% {
-      transform: translateX($wiggle-intensity);
-    }
+// -- heart
+@keyframes fill {
+	0% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
-// -- Footer
-@keyframes effect {
-    0% {background-color: $colour-primary;
-    -webkit-background-clip: text;
+@keyframes heart_full_opacity {
+    0% {
+        opacity: 0;
     }
-    25% {background-color: $colour-ball-loader;
-    -webkit-background-clip: text;
+    50% {
+        opacity: 0.5;
+        @include gradient-color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
-    
-    50% {background-color: $colour-secondary;
-    -webkit-background-clip: text;
+    50% {
+        opacity: 1;
+        @include gradient-color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
-    100% {background-color: $colour-tertiary;
-    -webkit-background-clip: text;
+}
+@keyframes heart_empty_opacity1 {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
     }
 }
