@@ -133,13 +133,11 @@
 
 //-- restaurant
 .restaurants {
-    background-color: #f6f6f6;
+    background-color: $colour-block;
 
     &_block {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        @include flexbox(center);
+        flex-flow: row wrap;
     }
 
     &_title {
@@ -155,7 +153,7 @@
     min-width: 280px;
 
     @media screen and (min-width: 375px) {
-        max-width: 330px;
+        max-width: 300px;
         min-width: 280px;
     }
     @media screen and (min-width: 650px) {

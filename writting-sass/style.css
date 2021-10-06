@@ -13,6 +13,10 @@ a {
   color: black;
 }
 
+Block_page {
+  max-width: 1440px;
+}
+
 /* Loader */
 @keyframes fadeOut {
   0%, 60% {
@@ -152,6 +156,7 @@ a {
 header {
   min-width: 320px;
   padding: 21px 0;
+  width: 100%;
 }
 header .logo {
   position: relative;
@@ -378,13 +383,14 @@ footer .footer_logo {
 }
 
 .restaurants {
-  background-color: #f6f6f6;
+  background-color: #f6F6F6;
 }
 .restaurants_block {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex-flow: row wrap;
 }
 .restaurants_title {
   padding: 50px 0 10px 22px;
@@ -399,7 +405,7 @@ footer .footer_logo {
 }
 @media screen and (min-width: 375px) {
   .restaurants_card {
-    max-width: 330px;
+    max-width: 300px;
     min-width: 280px;
   }
 }
@@ -549,7 +555,7 @@ footer .footer_logo {
 
 .card_menu {
   background-color: #FFF;
-  max-width: 350px;
+  max-width: 355px;
   height: 70px;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   padding: 0 0 0 16px;
@@ -561,21 +567,21 @@ footer .footer_logo {
 }
 @media screen and (min-width: 400px) and (max-width: 1024px) {
   .card_menu {
-    max-width: none;
+    width: 100%;
   }
 }
 .card_menu_dish {
-  width: 350px;
-  padding: 14px 0;
+  width: 355px;
+  padding: 12px 0;
   border-radius: 0.75rem;
   display: flex;
   justify-content: space-between;
 }
 .card_menu_dish h3 {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .card_menu_dish h4 {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 @media screen and (min-width: 320px) and (max-width: 425px) {
   .card_menu_dish h3 {
@@ -652,7 +658,7 @@ footer .footer_logo {
   align-items: flex-end;
   align-self: flex-end;
   font-weight: bold;
-  margin-right: 20px;
+  margin-right: 18px;
   width: 25%;
 }
 
@@ -663,14 +669,30 @@ footer .footer_logo {
   justify-content: space-between;
   text-overflow: ellipsis;
 }
+@media screen and (max-width: 320px) {
+  .title_menu {
+    width: 150px;
+  }
+}
 .title_menu h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+@media screen and (max-width: 320px) {
+  .title_menu h3 {
+    font-size: 0.8rem;
+  }
+}
 .title_menu h4 {
   font-weight: 500;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: wrap;
+}
+@media screen and (max-width: 320px) {
+  .title_menu h4 {
+    font-size: 0.7rem;
+    font-weight: 300;
+  }
 }
 
 .button {
