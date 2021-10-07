@@ -27,9 +27,3 @@ $breakpoints : (
     small: 500px,
     medium: 1000px,
 );
-
-@mixin media-small {
-    @media screen and (max-width: map-get($breakpoints, samm)) {
-        @content;
-    }
-}

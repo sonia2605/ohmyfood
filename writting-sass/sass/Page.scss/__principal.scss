@@ -22,7 +22,11 @@
     top: 50%;
     transform: translateY(-50%);
     .situation__form {
+    -moz-placeholder {
+    color: $shadow-color;
+    }
     position: relative;
+    
 }
 }
 }

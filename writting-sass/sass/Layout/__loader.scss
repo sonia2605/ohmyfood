@@ -11,8 +11,8 @@
 	display: inline-block;
 	Z-index: 1;
 	@include flexbox (center, center);
-	animation: fadeOut 0s both;
-	-webkit-animation: fadeOut 0s both;
+	animation: fadeOut 3s both;
+	-webkit-animation: fadeOut 3s both;
 }
 
 
