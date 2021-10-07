@@ -14,8 +14,7 @@
 .card_name {
     font-family: 'Shrikhand', cursive;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    @include flexbox(space-between);
 }
 .fa-heart::before {
     color: $shadow-color;
@@ -25,14 +24,13 @@
 
 .menu {
     @media screen and (min-width: 1024px) {
-        display: flex;
+        @include flexbox(space-between);
         flex-wrap: wrap;
-        justify-content: space-between;
     }
 } 
 
 .card_restaurant {
-    background-color: #f6f6f6;
+    background-color: $colour-block;
     padding: 36px 21px;
     margin-top: -27px;
     border-top-left-radius: 30px;
@@ -55,34 +53,19 @@
         width: 43px;
         height: 3px;
         background: $colour-tertiary;
+        animation: progress 1s;
     }
-}
-
-@keyframes fadein {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+} 
 
 .block_menu_starters {
-    animation: fadein 2s;
-
     @media  screen and (min-width: 1140px) {
         margin-right: 10px;
     } 
 }
 .block_menu_main {
-    animation: fadein 4s;
-
     @media screen and (min-width: 1142px) {
         marin-right: 10px;
     }
-}
-.block_menu_dessert {
-    animation: fadein 6s;
 }
 
 .block_menu_starters,
@@ -93,26 +76,29 @@
         font-size: 1.3rem;
     }
 }
-
+// -- Ne pas toucher a cette flexbox
 .card_menu {
-    background-color: #FFF;
+    background-color: $colour-block;
     max-width: 355px;
     height: 70px;
-    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0/10%);
+    @include shadow;
     padding: 0 0 0 16px;
     border-radius: .75rem;
     margin: 1rem 0;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-// @media screen and(min-width: 400px) and (max-width: 1024px) {
-// min-width: 250px;
-//  max-width: 315px;}
+    animation: appear .5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    transform: scale(0);
 
+   
 @media screen and (min-width: 400px) and (max-width: 1024px) {
     width: 100%;
     
 }
+
 &_dish {
     width: 355px;
     padding: 12px 0;
@@ -165,29 +151,23 @@
         max-width: 130px;
     }
     }
-
 .circle {
     transform: rotate(360deg);
 }
 }
-// @media screen and (min-width: 375px) {
-// min-width: 250px;
-// width: 100%;}
 }
-        
+
 .confirmation_menu {
     background-color: $colour-tertiary;
     min-width: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexbox(center, center);
     margin-right: -64px;
 }
 .circle {
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 100px;
-    background: #FFF;
+    background: $colour-block;
     color: $colour-tertiary;
     display: flex;
     align-items: center;
@@ -198,7 +178,6 @@
         margin-left: 4px;
     }
 }
-.center {text-align: center;}
 
 .price {
     display: flex;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv+"X-UA-Compatible" content+"IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/74cddb15c9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -11,33 +11,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">   
     <!-- primary Meta Tags -->
     <link rel="icon" href="images/logo/favicon.ico" />
-    <style id="fa-solid fa-hat-chef" media="all"></style>
+    <style id="fa-hat-chef" media="all"></style>
     <title>Ohmyfood!</title>
     <meta name="title" content="Accueil - ohmyfood!">
     <meta name="description" content="Ohmyfood! entreprise qui propose des menus à composer avec la commande de repas en ligne">
 </head>
 
 <body>
-    <main class="block_page">
+    <main class="bloc_page">
     <!-- spinner loading -->
-    <section class="loading">
+    <div class="loading">
         <span class="loader Bar"><span></span>
             OhMyFood
         </span>
-    </section>
+    </div>
     <!-- header -->
 <header>
     <div class="logo">
         <img src="images/logo/logo.png.png" alt="Logo Ohmyfood">
     </div>
 </header>
-<main class="principal">
+
     <!--Localization-->
-    <article class="Research">
+    <section class="Research">
         <div class="situation">
             <form method="post" action="treatment.php">
                 <i class="situation_icon fas fa-map-marker-alt" aria-hidden="true"></i>
-            <input id="Search" clas="situation_form" type="search" name="search" placeholder="Paris, Belleville">
+            <input id="Search" class="situation_form" type="search" name="search" placeholder="Paris, Belleville">
             </form>
         </div>
     <!-- slogan-->
@@ -45,29 +45,30 @@
 <P class="SloganText">Découvrez des restaurants d'exception, sélectionnés par nos soins.</P><br>
 <h3>
     <a class="btn" href="#">Explorez nos restaurants</a></h3>   
-    </article>
+</section>
+
     <!-- Function -->
     <h2 class="function_title">Fonctionnement</h2>
-    <section class="functioning">
-
-    <h3 class="function_element">
+    <div class="functioning">
+        
+    <div class="function_element">
+    <div class="function_element_number">1</div>
     <i class="function_element--icon fas fa-tablet-alt" aria-hidden="true"></i>
-    Choisissez un restaurant 
-    <div class="function_element--number">1</div>
-    </h3>
+    Choisissez un restaurant
+    </div>
 
-    <h3 class="function_element">
+    <div class="function_element">
+     <div class="function_element_number">2</div>    
     <i class="function_element--icon fas fa-list-ul" aria-hidden="true"></i>
     Composez votre menu
-    <div class="function_element--number">2</div>
-    </h3>
+    </div>
 
-    <h3 class="function_element">
+    <div class="function_element">
+    <div class="function_element_number">3</div>  
     <i class="function_element--icon fas fa-store" aria-hidden="true"></i>
     Dégustez au restaurant 
-    <div class="function_element--number">3</div>
-    </h3>
-    </section>    
+    </div>
+</div>    
 
     <!-- restaurants -->
     <section class="restaurants">
@@ -75,7 +76,7 @@
             <h2>Restaurants</h2>
         </div>
         <div class="restaurants_block">
-            <a href="./pages/La palette du goût.html ">
+            <a href="./pages/Lapalettedugoût.html ">
                 <div class="restaurants_card">
                     <div class="restaurants_card_image">
                         <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -99,7 +100,7 @@
              </div>
             </a>
 
-            <a href="./pages/la note enchantée.html">
+            <a href="./pages/lanoteenchantée.html">
                 <div class="restaurants_card">
                     <div class="restaurants_card_image">
                         <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
@@ -123,7 +124,7 @@
              </div>
             </a> 
 
-            <a href="./pages/A la française.html">
+            <a href="./pages/àlafrançaise.html">
                 <div class="restaurants_card">
                     <div class="restaurants_card_image">
                         <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
@@ -146,7 +147,7 @@
              </div>
             </a> 
 
-            <a href="./pages/Le délice des sens.html">
+            <a href="./pages/Ledélicedessens.html">
                 <div class="restaurants_card">
                     <div class="restaurants_card_image">
                         <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
@@ -168,8 +169,8 @@
                 </div>
              </div>
             </a>
+            </div>
     </section>
-</main>   
    <!-- Footer -->
    <footer>
     <h3 class="footer_logo">ohmyfood</h3>
@@ -186,6 +187,6 @@
         <h3>Contact</h3>
     </a>
 </footer> 
-    </main>
+</main>
 </body>
 </html>

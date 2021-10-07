@@ -2,6 +2,7 @@
 @import "./Utils/_variables";
 @import "./Utils/_mixins";
 @import "./Utils/_keyframes";
+ 
 @import "./Layout/_loader";
 @import "./Layout/_header";
 @import "./Layout/_footer";
@@ -10,4 +11,5 @@
 @import "./components/icon_new";
 @import "./Page.scss/restaurants";
 @import "./components/button_check";
-    
+
+@import "./Utils/animations"; 
