@@ -14,7 +14,6 @@ a {
 }
 
 .bloc_page {
-  width: 98%;
   max-width: 1440px;
   margin: auto;
 }
@@ -128,6 +127,11 @@ a {
   animation: fadeOut 3s both;
   -webkit-animation: fadeOut 3s both;
 }
+@media screen and (min-width: 280px) and (max-width: 768px) {
+  .loading {
+    font-size: 2.5rem;
+  }
+}
 
 .loader {
   position: relative;
@@ -140,7 +144,7 @@ a {
   content: "";
   position: absolute;
   display: block;
-  margin: 10rem;
+  margin: 6rem;
   left: 0px;
   top: 0;
   padding-left: 50px;
@@ -174,6 +178,11 @@ a {
   background-color: #20b2AA;
   -webkit-animation-delay: 0.75s;
   animation-delay: 0.75s;
+}
+@media screen and (min-width: 280px) and (max-width: 768px) {
+  .Bar span:after {
+    margin: 3rem;
+  }
 }
 
 header {
@@ -578,9 +587,9 @@ footer .footer_logo {
   animation-fill-mode: forwards;
   transform: scale(0);
 }
-@media screen and (min-width: 400px) and (max-width: 1024px) {
+@media screen and (min-width: 360px) and (max-width: 1024px) {
   .card_menu {
-    width: 100%;
+    width: 300px;
   }
 }
 .card_menu_dish {

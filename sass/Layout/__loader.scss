@@ -13,6 +13,9 @@
 	@include flexbox (center, center);
 	animation: fadeOut 3s both;
 	-webkit-animation: fadeOut 3s both;
+	@media screen and (min-width: 280px) and (max-width: 768px) {
+		font-size: 2.5rem;
+	}
 }
 
 
@@ -26,7 +29,7 @@
 	content: '';
 	position: absolute;
 	display: block;
-	margin: 10rem;
+	margin: 6rem;
 	left: 0px;
 	top: 0;
 	padding-left: 50px;
@@ -53,5 +56,9 @@
 	top: 35px;
 	background-color: $colour-ball-loader;
 	-webkit-animation-delay: .75s;
-	animation-delay: .75s;}
+	animation-delay: .75s;
+		@media screen and (min-width: 280px) and (max-width: 768px) {
+			margin: 3rem;
+		}
+}
 
