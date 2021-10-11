@@ -6,7 +6,7 @@ header {
         position: relative;
         @include flexbox(center, center);
         img {
-            max-width: 168px;
+            max-width: 150px;
             
         }
     }

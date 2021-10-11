@@ -198,7 +198,7 @@ header .logo {
   align-items: center;
 }
 header .logo img {
-  max-width: 168px;
+  max-width: 150px;
 }
 
 .fa-arrow-left::before {
