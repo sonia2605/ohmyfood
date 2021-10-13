@@ -2,15 +2,20 @@ header {
     min-width: 320px;
     padding: 21px 0;
     width: 100%;
+    @media screen and (min-width: 280px) and (max-width: 375px){
+        min-width: 280px;
+    }
+    }
     .logo {
         position: relative;
         @include flexbox(center, center);
+        
         img {
-            max-width: 150px;
-            
+            max-width: 150px;  
         }
     }
-    }
+    
+
 
 .fa-arrow-left::before {
     position: absolute;

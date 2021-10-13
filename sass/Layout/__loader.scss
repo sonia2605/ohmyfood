@@ -10,11 +10,15 @@
 	position: fixed;
 	display: inline-block;
 	Z-index: 1;
-	@include flexbox (center, center);
+	@include flexbox(center, center);
 	animation: fadeOut 3s both;
 	-webkit-animation: fadeOut 3s both;
-	@media screen and (min-width: 280px) and (max-width: 768px) {
-		font-size: 2.5rem;
+	@media screen and (max-width: 768px) {
+		font-size: 2.2rem;
+	}
+	@media screen and (max-width: 320px) {
+		font-size: 1.8rem;
+
 	}
 }
 
@@ -38,27 +42,36 @@
 	border-radius: 50px;
 	background-color: $colour-primary;
 	-webkit-animation: bar 1s linear infinite;
-	animation: bar 1s linear infinite;}
+	animation: bar 1s linear infinite;
+@media  screen and(max-width: 320px) {
+	margin: -2.8rem;
+}}
 	.Bar:after{
 	left: 15px;
 	top: -15px;
 	background-color: $colour-secondary;
 	-webkit-animation-delay: .25s;
-	animation-delay: .25s;}
+	animation-delay: .25s;
+@media screen and(max-width: 320px) {
+	margin: 4rem;
+}}
 	.Bar span:before{
 	left: 35px;
 	top: -30px;
 	background-color: $colour-tertiary;
 	-webkit-animation-delay: .50s;
-	animation-delay: -.50s;}
+	animation-delay: -.50s;
+	@media screen and(max-width: 320px) {
+		margin: -1.6rem;
+	}}
 	.Bar span:after{
 	left: 45px;
 	top: 35px;
 	background-color: $colour-ball-loader;
 	-webkit-animation-delay: .75s;
 	animation-delay: .75s;
-		@media screen and (min-width: 280px) and (max-width: 768px) {
-			margin: 3rem;
+		@media screen and (max-width: 320px) {
+			margin: 1.8rem;
 		}
 }
 

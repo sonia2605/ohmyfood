@@ -3,9 +3,10 @@
     padding: 0; 
 }
 
-body{
-    box-sizing: border-box;
+html,body{
+    max-width: 1440px;
 	font-family: 'Roboto', sans-serif; 
+    margin: auto;
 }
 
 a {
@@ -14,5 +15,4 @@ a {
 }
 .bloc_page {
     max-width: 1440px;
-    margin: auto;
 }

@@ -1,4 +1,8 @@
-
+.bloc_page {
+    box-sizing: border-box;
+    margin: auto;
+    flex: 1 0 auto;
+}
 // -- Header 
 
 .image_restaurant {
@@ -13,10 +17,16 @@
 
 .card_name {
     font-family: 'Shrikhand', cursive;
-    width: 100%;
-    @include flexbox(space-between);
+    @include flexbox(space-between, center);
+    max-width: 322px;
+    @media screen and(min-width:400px) {
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+    }
 }
 .fa-heart::before {
+    margin-left: 20px;
     color: $shadow-color;
     animation: fill 3s ease-out;
 }
@@ -79,7 +89,7 @@
 // -- Ne pas toucher a cette flexbox
 .card_menu {
     background-color: $colour-block;
-    max-width: 355px;
+    max-width: 350px;
     height: 70px;
     @include shadow;
     padding: 0 0 0 16px;
@@ -94,13 +104,13 @@
     transform: scale(0);
 
    
-@media screen and (min-width: 360px) and (max-width: 1024px) {
-    width: 300px;
+@media screen and (min-width: 400px) and (max-width: 1024px) {
+    max-width: none;
     
 }
 
 &_dish {
-    width: 355px;
+    width: 354px;
     padding: 12px 0;
     border-radius: .75rem;
     display: flex;
@@ -194,14 +204,14 @@
     flex-direction: column;
     justify-content: space-between;
     text-overflow: ellipsis;
-    @media screen and(max-width: 320px){
+    @media screen and(max-width: 375px){
         width: 150px;
     } 
 
     h3 {
         text-overflow: ellipsis;
         white-space: nowrap;
-        @media screen and(max-width: 320px){
+        @media screen and(max-width: 375px){
             font-size: 0.8rem;
         } 
     }
@@ -209,7 +219,7 @@
         font-weight: 500;
         text-overflow: ellipsis;
         white-space: wrap;
-        @media screen and(max-width: 320px) {
+        @media screen and(max-width: 375px) {
             font-size: 0.7rem;
             font-weight: 300;
             
