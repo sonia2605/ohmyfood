@@ -25,11 +25,11 @@
         max-width: 100%;
     }
 }
+
 .fa-heart::before {
     margin-left: 20px;
-    color: $shadow-color;
-    animation: fill 3s ease-out;
-}
+    cursor: pointer;
+    }
 
 
 .menu {
@@ -204,24 +204,28 @@
     flex-direction: column;
     justify-content: space-between;
     text-overflow: ellipsis;
-    @media screen and(max-width: 375px){
-        width: 150px;
-    } 
+    @media screen and(max-width: 290px){
+        width: 190px;
+    }
+
 
     h3 {
         text-overflow: ellipsis;
+        overflow: hidden;
         white-space: nowrap;
-        @media screen and(max-width: 375px){
-            font-size: 0.8rem;
-        } 
+        width: 100%;
+        @media screen and(max-width: 290px){
+            font-size: 0.75rem;
+        }
     }
     h4 {
-        font-weight: 500;
+        font-weight: 300;
+        font-size: 0.8rem;
         text-overflow: ellipsis;
+        overflow: hidden;
         white-space: wrap;
-        @media screen and(max-width: 375px) {
+        @media screen and(max-width: 420px) {
             font-size: 0.7rem;
-            font-weight: 300;
             
         }
     }
